@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}{% trans "Announcement lists" %}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Announcement lists" %}</h2>
+  <p class="date">{% trans "updated" %}: {% now "d/M/Y" %}</p>
+
+  <p>{% trans "An overview of all announcement lists available in this website. Actions are available to the right of the list name." %}</p>
+{% if object_list %}
+<table class="shout-lists standard">
+  <tr>
+    <th>{% trans "Name" %}</th>
+    <th>{% trans "Members" %}</th>
+    <th>{% trans "Messages" %}</th>
+    <th>{% trans "Actions" %}</th>
+  </tr>
+  {% for o in object_list %}
+  <tr class="{% cycle "odd" "even" %}">
+    <td>{{ o.name }} ({{ o.slug }})</td>
+    <td>{{ o.member_set.count }}</td>
+    <td>{{ o.message_set.count }}</td>
+    <td>
+      <a href="{% url shout-view-one o.slug %}"><img src="{{ MEDIA_URL }}shout/img/go-home.png" title="{% trans "view this announcement list" %}" alt="[{% trans "view" %}]"></img></a>
+      <a href="{% url shout-mail o.slug %}"><img src="{{ MEDIA_URL }}shout/img/mail-message-new.png" title="{% trans "e-mail this announcement list" %}" alt="[{% trans "mail" %}]"></img></a>
+    </td> 
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>{% trans "No announcement lists available yet!" %}</p>
+{% endif %}
+</div>
+{% endblock %}

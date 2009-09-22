@@ -1,0 +1,11 @@
+{% load i18n %}{% autoescape off %}{% blocktrans with object.list as list and object.list.member_set.count as members and object.list.member_set.count|pluralize as plural %}Hello,
+
+{{ object }} has just unsubscribed from {{ list }}.
+
+With this member out, the list has now {{ members }} member{{ plural }}.
+
+If you wish to post a message to this list or just check subscription, please visit: {% endblocktrans %}
+
+http://{{ site.domain }}{% url shout-view-one object.list.slug %} 
+
+{% blocktrans with site.name as name %}Your happy {{ name }} robot{% endblocktrans %}{% endautoescape %}

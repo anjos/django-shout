@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-22 18:16+0200\n"
+"PO-Revision-Date: 2009-09-22 17:55\n"
+"Last-Translator: <andre.dos.anjos@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.4.5.svn\n"
+
+#: admin.py:12 templates/shout/list.html:20 templates/shout/list.html.py:45
+#: templates/shout/lists.html:21
+msgid "Members"
+msgstr "Membres"
+
+#: admin.py:17
+msgid "No subscriptions yet!"
+msgstr "Pas de abonnements encore!"
+
+#: admin.py:18
+msgid "Last subscription"
+msgstr "Dernier abonné"
+
+#: forms.py:21
+msgid "e-mail"
+msgstr "e-mail"
+
+#: mail.py:53
+#, python-format
+msgid "You are receiving this e-mail because you are subscribed to %(list)s.\n"
+msgstr "Vous recevez cet e-mail parce que vous êtes abonné à %(list)s.\n"
+
+#: mail.py:54
+#, python-format
+msgid "If you wish to unsubscribe, please visit: %(site)s%(uri)s"
+msgstr ""
+"Si vous souhaitez vous désabonner, s'il vous plaît visitez: %(site)s%(uri)s"
+
+#: models.py:24 models.py:44 templates/shout/list.html:17
+#: templates/shout/list.html.py:49 templates/shout/lists.html:20
+msgid "Name"
+msgstr "Nom"
+
+#: models.py:24
+msgid "The name of your announcement list"
+msgstr "Le nom de votre liste de diffusion"
+
+#: models.py:25 templates/shout/list.html:18
+msgid "Slug"
+msgstr "Slug"
+
+#: models.py:25
+msgid "A shorter, slug entry so I can fake e-mails From fields."
+msgstr "Une plus courte entrée pour que je puisse créer des champs \"De\"."
+
+#: models.py:26
+msgid "Creation"
+msgstr "Création"
+
+#: models.py:26
+msgid "Set here the creation date of your list."
+msgstr "Réglez ici la date de création de votre liste."
+
+#: models.py:44
+msgid "Your complete name"
+msgstr "Votre nom complet"
+
+#: models.py:45 templates/shout/list.html:50
+msgid "E-mail"
+msgstr "E-mail"
+
+#: models.py:45
+msgid "Your e-mail"
+msgstr "Votre adresse e-mail"
+
+#: models.py:46
+msgid "Mobile phone number"
+msgstr "Numéro de téléphone mobile"
+
+#: models.py:46
+msgid ""
+"Your mobile phone number in the format +417X1234567, if you would like to "
+"receive SMSs"
+msgstr ""
+"Votre numéro de téléphone portable sur le format 417 X1234567, si vous "
+"souhaitez recevoir des SMSs"
+
+#: models.py:47 templates/shout/list.html:48
+msgid "Joined"
+msgstr "Adhésion"
+
+#: models.py:47
+msgid "Set here the joining date of this member."
+msgstr "Réglez ici la date de l'adhésion de ce membre."
+
+#: models.py:48 models.py:56
+msgid "Choose the list this member wants to be associated to"
+msgstr "Choisissez la liste que membre veut être associé à"
+
+#: models.py:49
+msgid "Language"
+msgstr "Langue"
+
+#: models.py:49
+msgid ""
+"Choose your preferred language. This setting will be used primarily for "
+"automatically generated messages."
+msgstr ""
+"Choisissez votre langue préférée. Ce paramètre sera utilisé principalement "
+"pour les messages générés automatiquement."
+
+#: models.py:54 templates/shout/email.html:17 templates/shout/list.html:28
+msgid "Subject"
+msgstr "Sujet"
+
+#: models.py:54
+msgid "The subject of your message"
+msgstr "Le sujet de votre message"
+
+#: models.py:55 templates/shout/email.html:9 templates/shout/email.html.py:13
+#: templates/shout/email.html:22
+msgid "Message"
+msgstr "Message"
+
+#: models.py:55
+msgid "The body of the message"
+msgstr "Le corps du message"
+
+#: models.py:57
+msgid "Sent"
+msgstr "Envoyé"
+
+#: models.py:57
+msgid "Set here the date of this message."
+msgstr "Réglez ici la date de ce message."
+
+#: models.py:58
+msgid "The site user that has sent the message"
+msgstr "L'utilisateur du site qui a envoyé le message"
+
+#: templates/shout/email.html:14
+msgid "sent"
+msgstr "envoyé"
+
+#: templates/shout/email.html:18
+msgid "From"
+msgstr "De"
+
+#: templates/shout/email.html:19
+msgid "To"
+msgstr "À"
+
+#: templates/shout/list.html:9 templates/shout/list.html.py:13
+msgid "Announcement list"
+msgstr "Liste de diffusion"
+
+#: templates/shout/list.html:15
+msgid "Summary"
+msgstr "Sommaire"
+
+#: templates/shout/list.html:19 templates/shout/list.html.py:27
+msgid "Date"
+msgstr "Date"
+
+#: templates/shout/list.html:21 templates/shout/list.html.py:24
+#: templates/shout/lists.html:22
+msgid "Messages"
+msgstr "Messages"
+
+#: templates/shout/list.html:29
+msgid "Sender"
+msgstr "Envoyeur"
+
+#: templates/shout/list.html:30 templates/shout/lists.html:23
+msgid "Actions"
+msgstr "Actions"
+
+#: templates/shout/list.html:38
+msgid "view this e-mail"
+msgstr "afficher cette e-mail"
+
+#: templates/shout/list.html:38 templates/shout/lists.html:31
+msgid "view"
+msgstr "affichage"
+
+#: templates/shout/list.html:39
+msgid "re-send"
+msgstr "renvoyer"
+
+#: templates/shout/list.html:51
+msgid "Mobile"
+msgstr "Mobile"
+
+#: templates/shout/lists.html:9 templates/shout/lists.html.py:13
+msgid "Announcement lists"
+msgstr "Listes de diffusion"
+
+#: templates/shout/lists.html:14
+msgid "updated"
+msgstr "mis à jour"
+
+#: templates/shout/lists.html:16
+msgid ""
+"An overview of all announcement lists available in this website. Actions are "
+"available to the right of the list name."
+msgstr ""
+"Une vision générale de toutes les listes de diffusion disponibles sur ce "
+"site. Les actions disponibles sont à la droite du nom de la liste."
+
+#: templates/shout/lists.html:31
+msgid "view this announcement list"
+msgstr "voir cette liste de diffusion"
+
+#: templates/shout/lists.html:32
+msgid "e-mail this announcement list"
+msgstr "envoyer un e-mail à cette liste de diffusion"
+
+#: templates/shout/lists.html:32
+msgid "mail"
+msgstr "mail"
+
+#: templates/shout/lists.html:38
+msgid "No announcement lists available yet!"
+msgstr "Pas de listes de diffusion disponibles pour le moment!"
+
+#: templates/shout/mail_list.html:9 templates/shout/mail_list.html.py:13
+msgid "Mail to"
+msgstr "Envoyer un mail à"
+
+#: templates/shout/mail_list.html:15
+msgid "Write your message"
+msgstr "Rédigez votre message"
+
+#: templates/shout/mail_list.html:19
+msgid ""
+"Please note we record who has sent the e-mail, but do not put this "
+"information in the message actually sent to the list, in order to protect "
+"the sender identity."
+msgstr ""
+"S'il vous plait noter que nous enregistrons qui a envoyé l'e-mail, mais ne "
+"mettons pas cette information dans le message envoyé à la liste, afin de "
+"protéger l'identité de l'expéditeur."
+
+#: templates/shout/mail_list.html:23 templates/shout/unsubscribe.html:19
+msgid "Send"
+msgstr "Envoyer"
+
+#: templates/shout/subscribe.html:3
+msgid ""
+"Subscribe to our list and receive the lastest news about our organisation. "
+"The mobile phone number is OPTIONAL"
+msgstr ""
+"Abonnez-vous à notre liste de diffusion pour recevoir les dernières "
+"nouvelles concernant notre organisation. Le numéro de téléphone mobile est "
+"FACULTATIF"
+
+#: templates/shout/subscribe.html:9
+msgid "subscribe"
+msgstr "s'abonner"
+
+#: templates/shout/subscribe_admin_message.txt:1
+#, python-format
+msgid ""
+"Hello, \n"
+"\n"
+"%(object)s has just subscribed to %(list)s.\n"
+"\n"
+"With this member, the list has now %(members)s member%(plural)s. Yes!\n"
+"\n"
+"If you wish to post a message to this list or just check subscriptions, "
+"please visit: "
+msgstr ""
+"Bonjour, \n"
+"\n"
+"%(object)s vient de souscrire à %(list)s. \n"
+"\n"
+"Grâce à ce membre, la liste a %(members)s membre%(plural)s. Yes!\n"
+"\n"
+"Si vous souhaitez envoyer un message à cette liste ou regarder les "
+"souscriptions, visitez:"
+
+#: templates/shout/subscribe_admin_message.txt:11
+#: templates/shout/subscribe_message.txt:13
+#: templates/shout/unsubscribe_admin_message.txt:11
+#, python-format
+msgid "Your happy %(name)s robot"
+msgstr "Votre heureux robot de %(name)s"
+
+#: templates/shout/subscribe_admin_subject.txt:1
+msgid "SUBSCRIBE"
+msgstr "S'ABONNER"
+
+#: templates/shout/subscribe_message.txt:1
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"You have subscribed to the mailing list %(list)s with the following "
+"parameters: \n"
+"\n"
+"%(object)s\n"
+"\n"
+"From now on, you will hear from us!\n"
+"\n"
+"At any time, if you wish to unsubscribe from this list, just visit:"
+msgstr ""
+"Bonjour %(name)s, \n"
+"\n"
+"Vous avez vous abonné à la liste de diffusion %(list)s avec les paramètres "
+"suivants: \n"
+"\n"
+"%(object)s  \n"
+"\n"
+"À partir de maintenant, vous allez entendre parler de nous! \n"
+"\n"
+"À tout moment, si vous souhaitez vous désabonner de cette liste, il suffit "
+"de visiter le site:"
+
+#: templates/shout/subscribe_subject.txt:1
+#, python-format
+msgid "Welcome to the announcement list %(name)s"
+msgstr "Bienvenue à la liste de diffusion %(name)s"
+
+#: templates/shout/subscribe_thanks.html:10
+msgid "Subscription confirmed!"
+msgstr "Abonnement confirmé!"
+
+#: templates/shout/subscribe_thanks.html:14
+#: templates/shout/unsubscribe_thanks.html:14
+msgid "Thank you!"
+msgstr "Merci!"
+
+#: templates/shout/subscribe_thanks.html:15
+msgid "We confirm the subscription of"
+msgstr "Nous confirmons l'abonnement de"
+
+#: templates/shout/subscribe_thanks.html:15
+msgid "to"
+msgstr "à"
+
+#: templates/shout/subscribe_thanks.html:15
+msgid "Thanks for your interest in our activities. You will hear from us soon!"
+msgstr ""
+"Merci pour l'intérêt que vous nous portez. Vous entendrez bientôt de nous!"
+
+#: templates/shout/unsubscribe.html:10 templates/shout/unsubscribe.html:14
+msgid "Unsubscribe"
+msgstr "Désabonner"
+
+#: templates/shout/unsubscribe.html:15
+#, python-format
+msgid ""
+"Type-in the subscribed e-mail address at \"%(object)s\" to unsubscribe to "
+"this announcement list. Please note that by doing this, you also unsubscribe "
+"any mobile phone numbers associated (so, no more SMSs from us!)."
+msgstr ""
+"Tapez l'adresse e-mail abonné à \"%(object)s\" pour vous désabonner de cette "
+"liste de diffusion. S'il vous plait noter que, en faisant ça, vous "
+"désabonnez aussi le numéro de téléphone mobile associé (donc, plus de SMSs "
+"aussi!)."
+
+#: templates/shout/unsubscribe_admin_message.txt:1
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"%(object)s has just unsubscribed from %(list)s.\n"
+"\n"
+"With this member out, the list has now %(members)s member%(plural)s.\n"
+"\n"
+"If you wish to post a message to this list or just check subscription, "
+"please visit: "
+msgstr ""
+"Bonjour, \n"
+"\n"
+"%(object)s vient de se désabonner de %(list)s. \n"
+"\n"
+"Sans ce membre, la liste a %(members)s membre%(plural)s. Si vous souhaitez "
+"envoyer un message à cette liste ou vérifier les abonnements, s'il vous "
+"plaît visitez le site:"
+
+#: templates/shout/unsubscribe_admin_subject.txt:1
+msgid "UNSUBSCRIBE"
+msgstr "DÉSABONNER"
+
+#: templates/shout/unsubscribe_thanks.html:10
+msgid "Unsubscription confirmed!"
+msgstr "Désabonnement confirmé!"
+
+#: templates/shout/unsubscribe_thanks.html:15
+msgid "We confirm the unsubscription of"
+msgstr "Nous confirmons le désabonnement de"
+
+#: templates/shout/unsubscribe_thanks.html:15
+msgid "from"
+msgstr "de"
+
+#: templates/shout/unsubscribe_thanks.html:15
+msgid ""
+"Thanks for your interest in our activities. You will no longer hear from us."
+msgstr ""
+"Merci pour votre intérêt. Vous n'allez plus recevoir des e-mails de cette "
+"liste de diffusion."

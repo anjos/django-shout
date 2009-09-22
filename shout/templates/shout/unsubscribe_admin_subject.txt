@@ -1,0 +1,1 @@
+{% load i18n %}{% autoescape off %}* [{{ object.list.slug }}] {% trans "UNSUBSCRIBE" %} {{ object }}{% endautoescape %}

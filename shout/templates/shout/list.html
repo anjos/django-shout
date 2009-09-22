@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}{% trans "Announcement list" %} {{ object.name }}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Announcement list" %} "{{ object.name }}"</h2>
+
+  <h3>{% trans "Summary" %}</h3>
+  <table class="standard horizontal">
+    <tr><th>{% trans "Name" %}</th><td>{{ object.name }}</td></tr>
+    <tr><th>{% trans "Slug" %}</th><td>{{ object.slug }}</td></tr>
+    <tr><th>{% trans "Date" %}</th><td>{{ object.creation|date:"l, d/M/Y H:i" }}</td></tr>
+    <tr><th>{% trans "Members" %}</th><td>{{ object.member_set.count }}</td></tr>
+    <tr><th>{% trans "Messages" %}</th><td>{{ object.message_set.count }}</td></tr>
+  </table>
+
+  <h3>{% trans "Messages" %}</h3>
+  <table class="standard">
+    <tr>
+      <th>{% trans "Date" %}</th>
+      <th>{% trans "Subject" %}</th>
+      <th>{% trans "Sender" %}</th>
+      <th>{% trans "Actions" %}</th>
+    </tr>
+    {% for m in object.message_set.all %}
+    <tr class="{% cycle "even" "odd" %} standard">
+      <td class="sent-date">{{ m.sent|date:"l, j/F/y" }}</td>
+      <td class="subject">{{ m.subject }}</td>
+      <td class="sender">{{ m.by.first_name }} ({{ m.by.username }})</td>
+      <td>
+        <a href="{% url shout-view-mail m.id %}"><img src="{{ MEDIA_URL }}shout/img/go-home.png" title="{% trans "view this e-mail" %}" alt="[{% trans "view" %}]"></img></a>
+        <a href="{% url shout-mail m.list.slug,m.id %}"><img src="{{ MEDIA_URL }}shout/img/mail-forward.png" title="{% trans "re-send" %}" alt="[{% trans "re-send" %}]"></img></a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <h3>{% trans "Members" %}</h3>
+  <table class="standard">
+    <tr>
+      <th>{% trans "Joined" %}</th>
+      <th>{% trans "Name" %}</th>
+      <th>{% trans "E-mail" %}</th>
+      <th>{% trans "Mobile" %}</th>
+    </tr>
+    {% for m in object.member_set.all %}
+    <tr class="{% cycle "even" "odd" %}">
+      <td>{{ m.joined|date:"l, j/F/y" }}</td>
+      <td>{{ m.name }}</td>
+      <td>{{ m.email }}</td>
+      <td>{{ m.mobile }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

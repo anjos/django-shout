@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  {{ form.media }}
+{% endblock %}
+
+{% block title %}{% trans "Unsubscribe" %} "{{ object }}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Unsubscribe" %} {{ object }}</h2>
+  <p>{% blocktrans %}Type-in the subscribed e-mail address at "{{ object }}" to unsubscribe to this announcement list. Please note that by doing this, you also unsubscribe any mobile phone numbers associated (so, no more SMSs from us!).{% endblocktrans %}</p>
+  <form method="POST" action="">
+  <table class="mail-list">
+    {{ form }} 
+    <tr><td><input type="submit" value="{% trans "Send" %}" /></td></tr>
+  </table>
+  </form>
+</div>
+{% endblock %}

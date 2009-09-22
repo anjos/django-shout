@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  {{ form.media }}
+{% endblock %}
+
+{% block title %}{% trans "Subscription confirmed!" %}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Thank you!" %}</h2>
+  <p>{% trans "We confirm the subscription of" %} {{ object }} {% trans "to" %} {{ object.list }}. {% trans "Thanks for your interest in our activities. You will hear from us soon!" %}</p>
+</div>
+{% endblock %}

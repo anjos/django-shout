@@ -1,0 +1,13 @@
+{% load i18n %}{% autoescape off %}{% blocktrans with object.name as name and object.list as list %}Hello {{ name }},
+
+You have subscribed to the mailing list {{ list }} with the following parameters: 
+
+{{ object }}
+
+From now on, you will hear from us!
+
+At any time, if you wish to unsubscribe from this list, just visit:{% endblocktrans %}
+
+http://{{ site.domain}}{% url shout-unsubscribe object.list.slug %}
+
+{% blocktrans with site.name as name %}Your happy {{ name }} robot{% endblocktrans %}{% endautoescape %}

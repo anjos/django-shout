@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n shout_filters %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}{% trans "Mail to" %} {{ object.name }}{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Mail to" %} "{{ object.name }}"</h2>
+
+  <h3>{% trans "Write your message" %}</h3>
+  <form method="POST" action="">
+    <table class="mail-list">
+      <tr><th>From</th><td>{{ user|email_from }}</td></tr>
+      <tr><th></th><td class="help_text">{% trans "Please note we record who has sent the e-mail, but do not put this information in the message actually sent to the list, in order to protect the sender identity." %}</td></tr>
+      <tr><th>To</th><td>{{ object }}</td></tr> 
+      <tr><th>Date</th><td>{% now "l, d/M/Y, H:i" %}</td></tr>
+      {{ form }} 
+      <tr><td><input type="submit" value="{% trans "Send" %}" /></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock %}

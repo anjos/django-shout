@@ -1,0 +1,78 @@
+@import url('global.css');
+
+/* Styles for announcement list pages */
+
+form.subscription-form {
+  text-align: left;
+  width: 95%;
+}
+
+form.subscription-form table {
+  padding: 0.2em;
+  margin-left: 0.6em;
+}
+
+form.subscription-form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  -moz-border-radius: 0.2em; 
+  -khtml-border-radius: 0.2em; 
+  border-radius: 0.2em; 
+}
+
+form.subscription-form p.submit input {
+  width: 40%;
+  border-style: outset;
+}
+
+form.subscription-form td {
+  font-style: italic;
+}
+
+div.introduction {
+  padding: 5px;
+  width: 95%;
+  text-align: center;
+}
+
+div.introduction p {
+  text-align: left;
+  text-indent: none;
+  font-style: normal;
+  border: 1px solid #f88;
+  background: #fcc;
+  -moz-border-radius: 0.5em; 
+  -khtml-border-radius: 0.5em; 
+  border-radius: 0.5em; 
+  padding: 0.5em;
+}
+
+form.subscription-form label {
+  font-weight: bold;
+}
+
+form.subscription-form p.submit {
+  text-align: right;
+}
+
+div.unsubscribe {
+  padding: 5px;
+  width: 95%;
+  text-align: center;
+}
+
+div.unsubscribe p {
+  background-color: #ffc;
+  border: 1px solid #aa8;
+  -moz-border-radius: 0.5em; 
+  -khtml-border-radius: 0.5em; 
+  border-radius: 0.5em; 
+}
+
+table.mail-list input, table.mail-list textarea {
+  width: 95%;
+}
+
+table.mail-list textarea {
+  height: 30em;
+}

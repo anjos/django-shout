@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n shout_filters %}
+
+{% block media %}
+  {{ block.super }}
+  <link href="{{ MEDIA_URL }}shout/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+{% endblock %}
+
+{% block title %}{% trans "Message" %} "{{ object.subject|truncatewords:4 }}"{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="title">{% trans "Message" %} "{{ object.subject|truncatewords:3 }}"</h2>
+  <p class="date">{% trans "sent" %}: {{ object.sent|date:"l, j/F/y H:i" }}</p>
+
+  <table class="standard horizontal">
+    <tr><th>{% trans "Subject" %}</th><td>{{ object.subject }}</td></tr>
+    <tr><th>{% trans "From" %}</th><td>{{ object.by|email_from }}</td></tr>
+    <tr><th>{% trans "To" %}</th><td>{{ object.list }}</td></tr>
+  </table>
+
+  <h3>{% trans "Message" %}</h3>
+  <pre class="message">
+  {{ object.message }}
+  </pre>
+</div>
+{% endblock %}

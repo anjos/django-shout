@@ -1,0 +1,13 @@
+{% load i18n %}
+<div class="introduction">
+<p>{% trans "Subscribe to our list and receive the lastest news about our organisation. The mobile phone number is OPTIONAL" %}:</p>
+</div>
+<form class="subscription-form" method="POST" action="{% url shout-subscribe "agenda" %}">
+<table>
+  {{ subscribe_form }}
+</table>
+<p class="submit"><input type="submit" value="{% trans "subscribe" %}"/></p>
+</form>
+<div class="unsubscribe">
+<p>To unsubscribe <a href="{% url shout-unsubscribe "agenda" %}">click here</a>.</p>
+</div>

@@ -1,0 +1,1 @@
+{% load i18n %}{% autoescape off %}{% blocktrans with object.list.name as name %}Welcome to the announcement list {{ name }}{% endblocktrans %}{% endautoescape %}
